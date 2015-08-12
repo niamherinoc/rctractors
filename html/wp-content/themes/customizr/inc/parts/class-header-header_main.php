@@ -493,7 +493,6 @@ if ( ! class_exists( 'TC_header_main' ) ) :
 
       //STICKY HEADER
 	    if ( 0 != esc_attr( TC_utils::$inst->tc_opt( 'tc_sticky_shrink_title_logo') ) || TC___::$instance -> tc_is_customizing() ) {
-	    	$_logo_shrink 	= implode (';' , apply_filters('tc_logo_shrink_css' , array("height:30px!important","width:auto!important") )	);
 
 	    	$_title_font 	= implode (';' , apply_filters('tc_title_shrink_css' , array("font-size:0.6em","opacity:0.8","line-height:1.2em") ) );
 
