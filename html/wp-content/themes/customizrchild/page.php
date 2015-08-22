@@ -17,17 +17,17 @@ get_header(); ?>
                     <span class="sep">»</span>
                     <span class="trail-end">
                         <?php if(empty( $post->post_parent )) { ?>
-                            <?php echo get_the_title( $post->ID ); ?>
+                        <?php echo get_the_title( $post->ID ); ?>
                         <?php } else { ?>
-                            <a href="<?php echo get_post_permalink($post->post_parent); ?>"><?php echo get_the_title( $post->post_parent ); ?></a>
+                        <a href="<?php echo get_post_permalink($post->post_parent); ?>"><?php echo get_the_title( $post->post_parent ); ?></a>
                         <?php } ?>
                     </span>
 
                     <?php if(!empty($post->post_parent )) { ?>
-                        <span class="sep">»</span>
-                        <span class="trail-end">
-                            <?php echo get_the_title( $post->ID ); ?>
-                        </span>
+                    <span class="sep">»</span>
+                    <span class="trail-end">
+                        <?php echo get_the_title( $post->ID ); ?>
+                    </span>
                     <?php } ?>
                 </div>
             </div>
@@ -44,7 +44,7 @@ get_header(); ?>
 
             if($children){?>
 
-                <div class="span3 left">
+            <div class="span3 left">
                 <div id="left" >
                     <ul>
                         <?php echo $children; ?>
@@ -64,108 +64,193 @@ get_header(); ?>
                     <article class="row-fluid">
                         <?php if ( have_posts() ) : ?>
 
-                            <?php while ( have_posts() ) :
+                        <?php while ( have_posts() ) :
 
-                                the_post(); ?>
+                        the_post(); ?>
 
-                                <header class="entry-header">
-                                    <h1 class="entry-title "><?php the_title(); ?></h1>
-                                </header>
-
-
-                                <div class="entry-content">
-                                    <?php the_content(); ?>
-                                    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                                    <!-- RC Tractor Guy Website Ad 1 -->
-                                    <ins class="adsbygoogle"
-                                         style="display:inline-block;width:728px;height:15px"
-                                         data-ad-client="ca-pub-5213339202168178"
-                                         data-ad-slot="1721567141"></ins>
-                                    <script>
-                                    (adsbygoogle = window.adsbygoogle || []).push({});
-                                    </script>
-
-                                    <hr class="featurette-divider __before_content">
+                        <header class="entry-header">
+                            <h1 class="entry-title "><?php the_title(); ?></h1>
+                        </header>
 
 
-                                    <?php if( have_rows('content_boxes') ): ?>
+                        <div class="entry-content">
+                            <?php the_content(); ?>
 
-                                        <?php while( have_rows('content_boxes') ): the_row(); 
+                            <hr class="featurette-divider __before_content">
+
+
+                            <?php if ("Allow ads" == get_field('ads_checkbox')[0]) { ?>   
+
+
+                            <?php
+
+
+                            global $wp_query;
+
+                            $children = wp_list_pages("title_li=&child_of=".$post->ID."&echo=0");
+
+                            if($children){?>
+
+                            <div class = "small-ad-center">            
+                                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                                <!-- RC Tractor Guy Ad Small -->
+                                <ins class="adsbygoogle"
+                                style="display:inline-block;width:468px;height:15px"
+                                data-ad-client="ca-pub-5213339202168178"
+                                data-ad-slot="9143331948"></ins>
+                                <script>
+                                (adsbygoogle = window.adsbygoogle || []).push({});
+                                </script>
+
+                            </div> 
+                            <?php  } else { ?>
+
+                            <div class = "ad-center">
+                                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                                <!-- RC Tractor Guy Website Ad 1 -->
+                                <ins class="adsbygoogle"
+                                style="display:inline-block;width:728px;height:15px"
+                                data-ad-client="ca-pub-5213339202168178"
+                                data-ad-slot="1721567141"></ins>
+                                <script>
+                                (adsbygoogle = window.adsbygoogle || []).push({});
+                                </script>
+                            </div>
+
+                            <?php } ?>
+
+
+                            <?php } ?>
+
+                            <hr class="featurette-divider __before_content">
+
+
+                            <?php if( have_rows('content_boxes') ): ?>
+
+                            <?php while( have_rows('content_boxes') ): the_row(); 
 
                                             // vars
-                                            $title = get_sub_field('title');
-                                            $image = get_sub_field('image');
-                                            $content = get_sub_field('content');
-                                            $link = get_sub_field('link');
+                            $title = get_sub_field('title');
+                            $image = get_sub_field('image');
+                            $content = get_sub_field('content');
+                            $link = get_sub_field('link');
 
-                                            ?>
-
-                                            <?php if( $title ): ?>
-                                                <h2><?php echo $title; ?></h2>
-                                            <?php endif; ?>
-
-                                            <?php if($image) { ?>
-                                                <div class="row-fluid">
-                                                    <div class="span7">
-
-                                                        <?php echo $content; ?>
-
-                                                        <?php if( $link ): ?>
-                                                            <a href="<?php echo $link; ?>">Read more...</a>
-                                                        <?php endif; ?>
+                            ?>
 
 
-                                                    </div>
 
-                                                    <div class="span5">
+                            <?php if($image) { ?>
+                            <div class="row-fluid">
+                                <div class="span7">
 
-                                                        <?php if( $link ): ?>
-                                                            <a href="<?php echo $link; ?>">
-                                                        <?php endif; ?>
+                                    <?php if( $title ): ?>
+                                    <h2><?php echo $title; ?></h2>
+                                <?php endif; ?>
 
-                                                            <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt'] ?>" />
+                                <?php echo $content; ?>
 
-                                                        <?php if( $link ): ?>
-                                                            </a>
-                                                        <?php endif; ?>
-
-                                                    </div>
-                                                </div>
-                                            <?php }  else { ?>
-                                                <div class="row-fluid">
-                                                    <div class="span12">
-
-                                                        <?php echo $content; ?>
+                                <?php if( $link ): ?>
+                                <a href="<?php echo $link; ?>">Read more...</a>
+                            <?php endif; ?>
 
 
-                                                        <?php if( $link ): ?>
-                                                            <a href="<?php echo $link; ?>">Read more...</a>
-                                                        <?php endif; ?>
+                        </div>
 
-                                                    </div>
-                                                </div>
-                                            <?php } ?>
+                        <div class="span5">
 
+                            <?php if( $link ): ?>
+                            <a href="<?php echo $link; ?>">
+                            <?php endif; ?>
 
-                                             <hr class="featurette-divider __before_content">
+                            <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt'] ?>" />
 
-                                        <?php endwhile; ?>
-                                    <?php endif; ?>
-                                </div>
+                            <?php if( $link ): ?>
+                        </a>
+                    <?php endif; ?>
 
-                            <?php endwhile; ?>
-                        <?php endif; ?>
-                    </article>
                 </div>
+            </div>
+            <?php }  else { ?>
+            <div class="row-fluid">
+                <div class="span12">
 
-            
-                <?php do_action( '__after_article_container' ); ##hook of left sidebar ?>
+                    <?php if( $title ): ?>
+                    <h2><?php echo $title; ?></h2>
+                <?php endif; ?>
 
-            </div><!--.row -->
+                <?php echo $content; ?>
 
-        </div><!-- .container role: main -->
 
-    <?php do_action( '__after_main_container' ); ?>
+                <?php if( $link ): ?>
+                <a href="<?php echo $link; ?>">Read more...</a>
+            <?php endif; ?>
+
+        </div>
+    </div>
+    <?php } ?>
+
+
+    <hr class="featurette-divider __before_content">
+
+<?php endwhile; ?>
+<?php endif; ?>
+</div>
+
+<?php endwhile; ?>
+<?php endif; ?>
+
+<?php if ("Allow ads" == get_field('ads_checkbox')[0]) { ?>   
+
+<?php
+global $wp_query;
+
+$children = wp_list_pages("title_li=&child_of=".$post->ID."&echo=0");
+
+if($children){?>
+
+<div class = "small-ad-center">            
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- RC Tractor Guy Ad Small -->
+    <ins class="adsbygoogle"
+    style="display:inline-block;width:468px;height:15px"
+    data-ad-client="ca-pub-5213339202168178"
+    data-ad-slot="9143331948"></ins>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+
+</div> 
+<?php  } else { ?>
+
+<div class = "ad-center">
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- RC Tractor Guy Website Ad 1 -->
+    <ins class="adsbygoogle"
+    style="display:inline-block;width:728px;height:15px"
+    data-ad-client="ca-pub-5213339202168178"
+    data-ad-slot="1721567141"></ins>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+    <div>
+
+        <?php } ?>
+
+
+        <?php } ?>
+
+    </article>
+
+</div>
+
+
+<?php do_action( '__after_article_container' ); ##hook of left sidebar ?>
+
+</div><!--.row -->
+
+</div><!-- .container role: main -->
+
+<?php do_action( '__after_main_container' ); ?>
 
 </div><!--#main-wrapper"-->
 

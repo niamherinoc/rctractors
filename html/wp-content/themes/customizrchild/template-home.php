@@ -42,6 +42,9 @@ get_header(); ?>
 
 <div id="main-wrapper" class="container">
 
+<div class="ad-center">
+<hr class="featurette-divider post-list-grid">
+
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <!-- RC Tractor Guy Website Ad 1 -->
 <ins class="adsbygoogle"
@@ -51,7 +54,9 @@ get_header(); ?>
 <script>
 (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
+</div>
 
+<hr class="featurette-divider post-list-grid">
 
     <div class="container marketing">
         <div class="row widget-area" role="complementary">
@@ -98,32 +103,11 @@ get_header(); ?>
     <hr class="featurette-divider __before_main_container">
     
     <div class="row">
-        <div class="span1">
-            <?php echo do_shortcode('[aps-counter]'); ?>
-        </div>
-        <div class="span11">
+        <div class="span12">
             <h2>Hot Forum Topics</h2>
 
             <?php echo do_shortcode('[bbp-topic-index]'); ?>
-            <?php /*$args = array(
-                'post_type' => 'topic',
-                'orderby' => 'date',
-                'order' => 'DESC'
-            );
-
-            $postslist = get_posts( $args ); 
-            $lastElement = end($postslist);
-
-            foreach ( $postslist as $post ) : setup_postdata( $post ); ?>
-                <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-
-                <?php if($post != $lastElement) { ?>
-                |
-
-                <?php }
-
-                endforeach; */
-             ?>
+            
         </div>
     </div>
 </div>
@@ -192,6 +176,18 @@ get_header(); ?>
     </div><!--.article-container -->
 
 </div><!--.row -->
+</div>
+
+<div class="ad-center">
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- RC Tractor Guy Website Ad 1 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:15px"
+     data-ad-client="ca-pub-5213339202168178"
+     data-ad-slot="1721567141"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 </div>
 
 </div><!--#main-wrapper"-->

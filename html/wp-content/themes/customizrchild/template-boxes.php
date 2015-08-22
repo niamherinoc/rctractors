@@ -53,7 +53,7 @@ get_header(); ?>
                 </div><!-- #left or #right-->
             </div><!--.tc-sidebar -->
 
-            <div id="content" class="span6 article-container tc-gallery-style">   
+            <div id="content" class="span6 article-container tc-gallery-style boxes">   
 
                 <?php  } else { ?>
 

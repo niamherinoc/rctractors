@@ -21,11 +21,7 @@ get_header(); ?>
 					</span>
 					<span class="sep">»</span>
 					<span class="trail-end">
-						<?php if(empty( $post->post_parent )) { ?>
-						<?php echo get_the_title( $post->ID ); ?>
-						<?php } else { ?>
-						<a href="<?php echo get_post_permalink($post->post_parent); ?>"><?php echo get_the_title( $post->post_parent ); ?></a>
-						<?php } ?>
+						<a href="http://www.rctractorguy.com/forum">Forum</a>
 					</span>
 
 					<?php if(!empty($post->post_parent )) { ?>
@@ -46,7 +42,6 @@ get_header(); ?>
 
 				<article class="row-fluid">
 					<div id="forum-front" class="bbp-forum-front">
-						<h1 class="entry-title"><?php bbp_forum_archive_title(); ?></h1>
 						<div class="entry-content">
 
 							<?php bbp_get_template_part( 'content', 'archive-forum' ); ?>

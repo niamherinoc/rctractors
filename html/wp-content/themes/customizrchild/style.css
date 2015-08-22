@@ -333,3 +333,106 @@ footer .footer-links {
 
 }
 
+.ad-center {
+    margin: auto;
+    width: 728px;
+}
+
+.small-ad-center {
+    margin: auto;
+    width: 468px;
+}
+
+ol {
+  margin: 0;
+}
+
+.boxes .span6 {
+  margin-bottom: 10px;
+}
+
+.boxes .span6:nth-child(odd) {
+  margin-left: 0;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+table.forum {
+  border: 1px solid #777;
+}
+
+table.forum tr td, 
+table.forum tr th {
+  padding: 0 20px;
+  background-color: white;
+}
+
+table.forum th {
+  text-align: left;
+}
+
+table.forum tr.header th {
+  background-color: rgba(0, 136, 204, 0.498039);
+}
+
+.bbp-body * {
+  font-size: 14px;
+}
+
+table tr th:nth-child(1),
+table tr td:nth-child(1) {
+  width: 60%;
+}
+
+
+table tr th:nth-child(2),
+table tr td:nth-child(2) {
+  text-align: center;
+  width: 5%;
+}
+
+
+table tr th:nth-child(3),
+table tr td:nth-child(3) {
+  text-align: center;
+  width: 5%;
+}
+
+
+table tr th:nth-child(4),
+table tr td:nth-child(4) {
+  width: 30%;
+}
+
+.bbp-pagination {
+  width: auto;
+  float: left;
+}
+
+#bbpress-forums li.bbp-header {
+  background-color: rgba(0, 136, 204, 0.498039);
+    font-family: 'Fjalla One';
+    font-weight: 400;
+    font-size: 16px;
+    text-shadow: 0 1px 0 #fff;
+    color: #5a5a5a;
+}
+
+#bbpress-forums li.bbp-header a {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    text-shadow: none;
+    color: #5a5a5a;
+}
+
+
+ul.bbp-replies {
+    border: 1px solid #777;
+}
+
+#bbpress-forums div.odd, #bbpress-forums ul.odd {
+  background-color: white;
+}
