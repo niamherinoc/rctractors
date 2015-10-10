@@ -77,32 +77,21 @@ get_header(); ?>
 				<?php endwhile; ?>
 
 			<?php wp_reset_postdata(); ?>
+
 			</section>
 
 
 
 		</div><!--.article-container -->
 
-		<div class="span3 right tc-sidebar">
-			<div id="right" class="widget-area" role="complementary">
-				<aside id="search-2" class="widget widget_search">
-					<form role="search" method="get" id="searchform" class="searchform" action="http://192.168.33.21/">
-						<div>
-							<label class="screen-reader-text" for="s">Search for:</label>
-							<input type="text" value="" name="s" id="s">
-							<input type="submit" id="searchsubmit" value="Search">
-						</div>
-					</form>
-				</aside>
 
-				<aside>
-					<ul>
-						<?php wp_list_categories('orderby=name'); ?> 
-					</ul>
-				</aside>
-			</div>		
+		<div class="span3 right tc-sidebar">
+		 <div id="right" class="widget-area" role="complementary"> 
+		    <?php get_sidebar( 'blog' ); ?>
+		</div>
 		</div>
 
+	
 	</div><!--.row -->
 
 </div><!-- .container role: main -->

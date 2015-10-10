@@ -16,10 +16,6 @@ get_header(); ?>
 			<div class="span12">
 				<div class="breadcrumb-trail breadcrumbs" itemprop="breadcrumb">
 					<span class="trail-begin">
-						<a href="http://www.rctractorguy.com" title="RC Tractors" rel="home" class="trail-begin">Home</a>
-					</span>
-					<span class="sep">»</span>
-					<span class="trail-end">
 						<a href="http://www.rctractorguy.com/forum">Forum</a>
 					</span>
 					
@@ -46,7 +42,7 @@ get_header(); ?>
 
 	<div class="container" role="main">
 		<div class="row column-content-wrapper">
-			<div id="content" class="span9 article-container tc-gallery-style">   
+			<div id="content" class="span12 article-container tc-gallery-style">   
 
 
 				<article class="row-fluid">
@@ -57,33 +53,29 @@ get_header(); ?>
 
 					<?php while ( have_posts() ) : the_post(); ?>
 
-					<?php if ( bbp_user_can_view_forum( array( 'forum_id' => bbp_get_topic_forum_id() ) ) ) : ?>
-					<div id="bbp-topic-wrapper-<?php bbp_topic_id(); ?>" class="bbp-topic-wrapper">
-						<h1 class="entry-title"><?php bbp_topic_title(); ?></h1>
-						<div class="entry-content">
+						<?php if ( bbp_user_can_view_forum( array( 'forum_id' => bbp_get_topic_forum_id() ) ) ) : ?>
+							<div id="bbp-topic-wrapper-<?php bbp_topic_id(); ?>" class="bbp-topic-wrapper">
+								<h1 class="entry-title"><?php bbp_topic_title(); ?></h1>
+								<div class="entry-content">
 
-							<?php bbp_get_template_part( 'content', 'single-topic' ); ?>
+									<?php bbp_get_template_part( 'content', 'single-topic' ); ?>
 
-						</div>
-					</div><!-- #bbp-topic-wrapper-<?php bbp_topic_id(); ?> -->
+								</div>
+							</div><!-- #bbp-topic-wrapper-<?php bbp_topic_id(); ?> -->
 
-				<?php else : // Forum exists, user no access ?>
+						<?php else : // Forum exists, user no access ?>
 
-				<?php bbp_get_template_part( 'feedback', 'no-access' ); ?>
+							<?php bbp_get_template_part( 'feedback', 'no-access' ); ?>
 
-			<?php endif; ?>
+						<?php endif; ?>
 
-		<?php endwhile; ?>
+					<?php endwhile; ?>
 
-		<?php do_action( 'bbp_after_main_content' ); ?>
-	</article>
-</div>
-
-
-<?php do_action( '__after_article_container' ); ##hook of left sidebar ?>
-
-</div>
-</div>
+					<?php do_action( 'bbp_after_main_content' ); ?>
+				</article>
+			</div>
+		</div>
+	</div>
 </div>
 
 <?php //do_action( 'bbp_after_main_content' ); ?>

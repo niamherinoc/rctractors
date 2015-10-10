@@ -16,20 +16,9 @@ get_header(); ?>
 		<div class="row">
 			<div class="span12">
 				<div class="breadcrumb-trail breadcrumbs" itemprop="breadcrumb">
-					<span class="trail-begin">
-						<a href="http://www.rctractorguy.com" title="RC Tractors" rel="home" class="trail-begin">Home</a>
-					</span>
-					<span class="sep">»</span>
 					<span class="trail-end">
 						<a href="http://www.rctractorguy.com/forum">Forum</a>
 					</span>
-
-					<?php if(!empty($post->post_parent )) { ?>
-					<span class="sep">»</span>
-					<span class="trail-end">
-						<?php echo get_the_title( $post->ID ); ?>
-					</span>
-					<?php } ?>
 				</div>
 			</div>
 		</div>

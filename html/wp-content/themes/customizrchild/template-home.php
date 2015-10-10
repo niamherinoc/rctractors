@@ -62,8 +62,7 @@ get_header(); ?>
         <div class="row widget-area" role="complementary">
 
             <?php 
-// query
-            $args = array(
+                        $args = array(
                 'post_type' => 'page',
                 'posts_per_page' => -1,
                 'orderby' => 'menu_order',
@@ -77,10 +76,8 @@ get_header(); ?>
                     )
                 );
 
-// The Query
             query_posts( $args );
 
-// The Loop
             while ( have_posts() ) : the_post(); ?>
             <div class="span4 fp-one">
                 <div class="widget-front">
@@ -96,7 +93,6 @@ get_header(); ?>
             </div>
         <?php  endwhile;
 
-// Reset Query
         wp_reset_query(); ?>
     </div>
 
@@ -106,7 +102,7 @@ get_header(); ?>
         <div class="span12">
             <h2>Hot Forum Topics</h2>
 
-            <?php echo do_shortcode('[bbp-topic-index]'); ?>
+            <?php echo do_shortcode('[bbp-display-topic-index show="5"]'); ?>
             
         </div>
     </div>
@@ -123,16 +119,13 @@ get_header(); ?>
             <section class="row-fluid grid-cols-3">      
 
                 <?php 
-// query
                 $args = array(
                     'post_type' => 'post',
                     'posts_per_page' => 3,
                     );
 
-// The Query
                 query_posts( $args );
 
-// The Loop
                 while ( have_posts() ) : the_post(); ?>
 
                 <article class="tc-grid span4 post">

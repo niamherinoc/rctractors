@@ -436,3 +436,10 @@ ul.bbp-replies {
 #bbpress-forums div.odd, #bbpress-forums ul.odd {
   background-color: white;
 }
+
+.bbp-no-topic form {
+    background-color: white;
+    border: 1px solid lightgrey;
+    padding: 10px;
+    max-width: 300px;
+}
