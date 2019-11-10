@@ -1,43 +1,850 @@
-###################### Copyright ######################
-Customizr is a free WordPress theme designed by Nicolas Guillaume in Nice, France. (http://presscustomizr.com)
-Feel free to use, modify and redistribute this theme as you like.
-You may remove any copyright references (unless required by third party components) and crediting is not necessary, but much appreciated... ;-D.
-Customizr is distributed under the terms of the GNU GPL v2.0 or later
-Most important : enjoy it!
+=== Customizr ===
+Contributors: nikeo, d4z_c0nf
+Tags: one-column, two-columns, three-columns, left-sidebar, right-sidebar, buddypress, custom-menu, custom-colors, featured-images, full-width-template, theme-options, threaded-comments, translation-ready, sticky-post, post-formats, rtl-language-support, editor-style
+Requires at least: 4.6
+Tested up to: 5.2.2
+Stable tag: 4.1.46
+License: GPLv2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
+Customizr is a simple and fast WordPress theme designed to help you attract and engage more visitors.
 
+== Description ==
+Customizr is a simple and fast WordPress theme designed to help you attract and engage more visitors. Provides a perfect user experience on smartphones. Powers more than 100K active sites around the world. Hundreds of 5-stars reviews received on WordPress.org.
 
-######## Demo, Documentation, FAQs and Support #########
-* DEMO : http://demo.presscustomizr.com/
-* DOCUMENTATION : http://doc.presscustomizr.com/customizr
-* FAQs : http://doc.presscustomizr.com/customizr/faq
-* SUPPORT : https://wordpress.org/support/theme/customizr
-* SNIPPETS : http://presscustomizr.com/code-snippets/
-* HOOKS API : http://presscustomizr.com/customizr/hooks-api/
+== Upgrade Notice ==
+= 4.1.45 =
+Improved post format meta boxes for the new block editor. Implement skip to content for TRT requirement : https://make.wordpress.org/accessibility/handbook/markup/skip-links/.
 
+== Changelog ==
+= 4.1.46 October 22nd 2019 =
+* fixed : form fields, select, textarea, input, should be centered by default. fixes #1784
+* fixed : font-size might be too small in WordPress text editor. fixes #1781
 
+= 4.1.45 September 19th 2019 =
+* fixed : post format meta boxes for the block editor. fixes #1774
+* added : implement skip to content for TRT requirement ( https://make.wordpress.org/accessibility/handbook/markup/skip-links/ )
 
-####################### Licenses #######################
-Unless otherwise specified, all the theme files, scripts and images
-are licensed under GNU General Public License version 2, see file license.txt.
-The exceptions to this license are as follows:
-* Bootstrap by Twitter <http://twitter.github.com/bootstrap/>, and the Glyphicons Halflings set <http://www.glyphicons.com/> in inc/assets/img/glyphicons-halflings.., are licensed under the GPL-compatible [http://www.apache.org/licenses/LICENSE-2.0 Apache License v2.0]
-* bootstrap-carousel.js v2.3.0 is licensed under the Apache License
-* holder.js v1.9 is licensed under the Apache License
-* modernizr.js is dual licensed under the BSD and MIT licenses
-* jquery.iphonecheck.js is copyrighted by Thomas Reynolds, licensed GPL & MIT
-* jquery.fancybox-1.3.4.js is dual licensed under the MIT and GPL licenses
-* retina.min.js is copyrighted by Imulus, LLC, Ben Atkin, and other contributors and licensed under MIT
-* iCheck v1.0.1 by Damir Sultanov, http://git.io/arlzeA, MIT Licensed
-* selecter v3.0.9 - 2014-02-10, Copyright 2014 Ben Plum, MIT Licensed
-* stepper v3.0.5 - 2014-02-06, Copyright 2014 Ben Plum, MIT Licensed
-* Hammer.JS - v2.0.4 - Copyright (c) 2014 Jorik Tangelder, MIT license
-* Icon Set:	Entypo is licensed under SIL Open-Font License
-* The images screenshot.png, inc/assets/img/customizr-theme-customizer.png, inc/assets/img/customizr-theme-responsive.png are creations of Nicolas Guillaume and licensed under GPL v2+
-* The image slider-loader.gif is released under the WTFPL license (http://www.wtfpl.net/, GPL compatible), generated on http://ajaxload.info/
+= 4.1.44 August 28th 2019 =
+* improved : better keyboard navigation to comply with new TRT requirements : https://make.wordpress.org/themes/2019/08/03/planning-for-keyboard-navigation/. fixes #1771
 
+= 4.1.43 July 27th 2019 =
+* fixed : attachment page issue when building the gallery of siblings. fixes 1768
+* fixed : add space after content before the first sidebar on mobile fixes #1767
+* fixed : use consistent line-height accross html elements. fixes #1761
+* improved : better style for admin notices on mobiles
 
-#######################  Changelog ######################
+= 4.1.42 June 30th 2019 =
+* fixed : fix dropdown menu on hover not opening in tablet iOS based. fixes #1757
+* fixed : WooCommerce compat reduce the font size of the "apply coupon" text. fixes #1754
+* fixed H1 tag wrapping site-title, leading to possible multiple H1 on singular pages. fixes #1760
+
+= 4.1.41 June 3rd 2019 =
+* fixed : minor font-size issue. for #1755
+* improved : replaced TGMPA class for plugin recommendation
+
+= 4.1.40 May 29th 2019 =
+* improved : deactivation of modular font-size for headings (Hx) by default for mobile devices. fixes #1746.
+
+= 4.1.39 May 14th 2019 =
+* fixed : reponsive wrapper "breaking" video post formats when using self-hosted or facebook video URLs we now handle only the responsiveness embeds which are iframes. fixes #1742
+* fixed : remove 'hentry' among the post classes. fixes #1726
+* fixed : added missing nimblecheck controls in the customizer. fixes #1752
+* improved : remove offset for 2nd level submenu in desktops. fixes #1748
+* improved : remove title attribute "Permalink To" on thumbnails links in post lists and featured pages
+* added : new wp_body_open theme Hook. fixes #1722
+
+= 4.1.38 April 24th 2019 =
+* improved : block editor style in order to only enlarge the editor. fixes #1728
+* fixed : smooth scroll throwing JS errors in latest chrome. fixes #1739
+* fixed : using the letters "span" in categories could make their containers inherit the CSS rules defined with [class*="span"]. fixes #1734
+
+= 4.1.37 April 9th, 2019 =
+* fixed : image of featured pages not displayed when customizing
+
+= 4.1.36 April 9th, 2019 =
+* fixed : a bug with the images of featured pages not displayed sometimes.
+
+= 4.1.35 April 5th, 2019 =
+* fixed : make sure we catch the post_type_archive case when displaying the archive titles. fixes #1715
+* fixed : remove title attribute on logo and site title + add aria-label attribute. fixes #1719
+* fixed : compatibility issue with Event Tickets plugins. When the plugin was enabled no lists of posts were displayed. fixes #1724
+* improved : style of checkboxes in customizer controls. fixes #1729
+* added : a new option to control the current menu item highlighting. fixes #1718
+
+= 4.1.34 March 22nd, 2019 =
+* Fix: bug leading to related posts displayed in pages
+
+= 4.1.33 March 21st, 2019 =
+* fixed : WooCommerce product image issue
+
+= 4.1.32 March 21st, 2019 =
+* fixed : WooCommerce product image on top of the page disabled by default. because of https://github.com/presscustomizr/customizr/issues/1708#issuecomment-475151976
+
+= 4.1.31 March 20th, 2019 =
+* fixed : compatibility issue with the Event Tickets plugin. fixes #1700
+* fixed : php syntax, ensure that the delimiter param is always passed to the explode PHP function. fixes #1709
+* improved : new option to allow the WooCommerce featured image to be displayed before the main wrapper in full width. fixes #1708
+
+= 4.1.30 February 28th, 2019 =
+* fixed : PHP error when using PHP < 5.4 because of the use of the short array syntax. fixes #1697
+
+= 4.1.29 February 27th, 2019 =
+* fixed : make sure registered locations in the Customizr theme are always rendered when using the Nimble template and the Nimble header and footer
+* improved : hide main slider nav arrows in mobile with CSS only. fixes #1680
+* improved : "You May Also Like" smaller
+* improved : post list pagination is larger
+* added : a simple template tag parser, to be used with the filter 'czr_parse_template_tags'
+
+= 4.1.28 February 14th, 2019 =
+* fixed : removed unwanted lines displayed around the images of the featured pages on chrome
+* fixed : assigned width and height attributes to placehoder images. fixes #1684
+* improved : compatibility with the Social Media Share Buttons & Social Sharing Icons plugin. fixes #1683
+    
+= 4.1.27 February 2nd, 2019 =
+* fixed : the absolute positioned header should be displayed only when on home AND on first paginated page of the blog. fixes #1665
+* fixed : WooCommerce cart style issue when using several variations. fixes #1667
+* fixed : reset margin-top when a p html elemnt is a child of a li html element. fixes #1400
+* improved : extend anchor smooth scroll range of action. fixes #1662
+
+= 4.1.26 January 16th, 2019 =
+* fixed : wrong html5 shiv file path. fixes #1657
+* improved : remove unused iphone checkboxes assets. fixes #1627
+* added : an option to remove the various transparent header borders. fixes #1624
+* added : compatibility with the Q2W3 plugin
+* added : registered a new Nimble builder location above the footer. fixes #1664
+
+= 4.1.25 December 22nd, 2018 =
+* improved : add block editor style rtl, and make sure it is loaded when is_rtl(). fixes #1651
+
+= 4.1.24 December 18th, 2018 =
+* fixed : old customizer logo not shown in live preview even if not overridden see #1633 (comment)
+* improved : add block editor style, especially to enlarge the editor content width. fixes #1642
+
+= 4.1.23 December 15th, 2018 =
+* fixed : admin page css style not compatible with WP 5.0
+* fixed : mobile submenu background breaking with chrome on android. fixes #1635
+* fixed : amend select min-width:100% causing plugin compatibility issues. fixes #1636
+* fixed : PHP-7.3 warnings when passing undefined variables to compact(). fixes #1644
+* improved : update FontAwesome to v5.5.0. see presscustomizr/hueman#727. Also removed partial css files we don't use
+* improved : compatibility with the Nimble Builder v1.4+
+* improved : analytics params to external links in admin
+* improved : use the standard wp custom logo in place of our custom one. fixes #1633
+
+= 4.1.22 November 23rd 2018 =
+* fixed : czr_fn_is_customize_left_panel() => the check on $pagenow does not work on multisite install
+* fixed : removed style for unused help icon in admin bar
+* improved : replace select2 with our namespaced czrSelect2
+* improved : gutenberg alignment compatibility. fixes #1601
+* improved : The Events Calendar Pro mini calendar table style compat. fixes #1629
+* improved : WordPress 5.0 compatibility patch. fixes #1623
+* improved : Nimble Builder compatibility. Don't load css and javascript front assets when using the full Nimble template
+
+= 4.1.21 November 9th 2018 =
+* fixed : updated url to https://gmpg.org/xfn/11 see https://github.com/presscustomizr/hueman/issues/714
+* fixed : potential compatibility issue with WordPress 5.0. for #1623
+* fixed : element id duplication when using horizontal primary menu
+* fixed : html validation for meta with http-equiv attribute with value X-UA-Compatible: must have the value IE=EDGE fixes #1583
+* improved: added new WP editor responsive embeds support
+* improved: new WP editor blockquote style. Part of #1601
+* added : 3 social icons to the social links module : Line, Map, Discord
+
+= 4.1.20 October 25th 2018 =
+* fixed : remove breadcrumb itemprop that can produce html validation issues. fixes #1607
+* fixed : fix buddypress member activity filter issue. fixes #1606.
+* improved : support for new WordPress editor, block cover image alignwide/alignfull
+* improved : readme.txt file, according to the latest TRT requirements https://make.wordpress.org/themes/2015/04/29/a-revised-readme/
+
+= 4.1.19 October 13th 2018 =
+* fixed : prefixed TGMPA class with CZR to fix potential collision with other plugins using the same class. fixes #1603
+
+= 4.1.18 October 11th 2018 =
+* improved : display only one admin notification ( if any ) at a time
+* improved : Customizr various minor plugin compatibility improvements
+
+= 4.1.17 October 8th 2018 =
+* fixed : compatibility with the Nimble builder plugin, drop in __after_header location impossible when the header is transparent
+
+= 4.1.16 October 7th 2018 =
+* imp : added a Nimble dropzone location "__before_main_wrapper"
+* imp : added a priority param when registering a Nimble location
+
+= 4.1.15 October 6th 2018 =
+* fixed : missing space between fancybox link attributes. fixes #1593
+* fixed : WooCommerce variation form inputs appearance on Mozilla browsers. fixes #1598
+* improved : support custom post types in related posts
+* added : new option to make the header absolute positionned with a transparent background, on home.
+
+= 4.1.13 August 28th 2018 =
+* fixed : Comment RTL alignment. fixes #1582
+* fixed : Mobile menu doesn't open when using tab plugin (WPBakery Page Builder). fixes #1586
+* fixed : learnpress - avoid infinite loop when user tries to enroll a course.fixes #1589
+* fixed : improve learndash ordered list items style. fixes #1591
+* fixed : theme screenshot update following the new rule from the theme review team. https://make.wordpress.org/themes/2018/08/13/updated-screenshot-requirements/
+
+= 4.1.12 August 9th 2018 =
+* improved : theme screenshot compatibility with the latest requirements of the theme repository on WordPress.org, second pass following discussion : https://themes.trac.wordpress.org/ticket/58335
+
+= 4.1.11 August 9th 2018 =
+* improved : theme screenshot compatibility with the latest requirements of the theme repository on WordPress.org. (see https://make.wordpress.org/themes/2018/08/08/new-additions-to-the-screenshots-and-featured-images-requirements/)
+
+= 4.1.10 August 1st 2018 =
+* added : new option to display the site title next to the logo. Enabled by default. fixes #1573
+* imp : always make sure WC functions exist before calling them. fixes #1529
+* imp : replace slider iphone checks with checkboxes consistent with the Gutenberg editor style. also fixes #1540
+* imp : better compatibility with the Gutenberg editor for post-formats metaboxes. fixes #1576
+
+= 4.1.9 July 17th 2018 =
+* Imp: make sure the_author_description filter hook is fired. fixes #1561
+* Fix: make sure to respect the threaded comments wp setting. fixes #1563
+
+= 4.1.8 June 22nd 2018 =
+* Impr : compliancy with the latests WordPress.org rules for the themes : the demo content in previewer should be disabled. Featured pages and slider should be opted-in by users and not enabled by default.
+
+= 4.1.7 June 19th 2018 =
+* Fix: do not wrap ol item counters. fixes #1551
+* Fix: improve scoping of the link underline effect only to widgets we know. fixes #1544
+* Fix: do not print related posts by tags when the post has no tags. fixes #1549
+* Impr: improve some woocommerce checkout elements alignment. fixes #1536
+* Impr: when reacting to the post-load event make sure the response object is defined. fixes presscustomizr/customizr#1548
+* Impr: dropdown on hover: make sure pointer events on scroll are still allowed if there's at least one submenu opened
+
+= 4.1.6 June 6th 2018 =
+* Fix: radio and checkboxes style that should be applied only to relevant elments to avoid plugin conflits ( contact forms plugins for example ). fixes #1542
+
+= 4.1.5 May 31st 2018 =
+* Imp: make sure .navbar-brand height is set to auto to avoid issues with bootstrap3 based plugins. fixes #1533
+* Imp: build/delete retina version of pdf thumbnails. Also improve remove retina images logic. fixes #1387
+* Fix: fix comment-form-cookies-consent label and input appearance. fixes #1538
+
+= 4.1.4 May 1st 2018 =
+* Fix: search form close icon visual issue in IE10+. fixes #1512
+* Imp: do not load dev classes
+* Imp: decrease space above WooCommerce page title. fixes #1521
+* Added: options to fine tuning singular featured image height in smartphones
+both in modern and classical style fixes #1524
+
+= 4.1.3 April 15th 2018 =
+* Fix: no need to enqueue the front placeholders assets when user not logged in. fixes #1513
+* Fix: make sure the mfp gallery left arrow is correctly aligned. fixes #1515
+* Fix: set word-wrap break-word for whatever text in the page content. This will avoid text overflowing the parent element width, for example in list items
+
+= 4.1.2 March 29th 2018 =
+* Fix: author meta link pointing to wrong URL. fixes #1509
+
+= 4.1.1 March 23rd 2018 =
+* Fix: wrong text-domain for the social links module
+
+= 4.1.0 March 22nd 2018 =
+* Fix: do not display post metas for pages in search results
+* Fix: make sure our col*auto always have a max-width of 100%. fixes #1476
+* Imp: overall css improvements
+* Imp: remove post 'hentry' class when current post type is a page since author and published/update metas will not be printed in pages fixes #1344 #917 #864 #694 #1401. In blog/archives or single posts showing those metas is up to the user.
+* Imp: co-authors plus plugin integration
+* Imp: add horizontal widget area before the footer. fixes #1369
+* Imp: add early check on php version (min 5.3) and wp version (min 4.5). Fixes #1496
+* Imp: turn slider .czrs-title from H1 to H2.fixes #1489
+* Imp: fix various form plugins compatibility.fixes #1487, #1486
+* Imp: improve woocommerce single product tabs style
+* Imp: added various dismissable placeholders and notices on front with direct link to the live customizer.
+
+= 4.0.18 February 13th 2018 =
+* Fix: tagline visibility in mobiles when shown in desktop topbar. fixes #1458
+* Fix: topbar menu not displayed in fresh installs. fixes #1460
+* Fix: move hardcoded contact-info CSS rule into theme stylesheed. fixes #1436
+* Fix: fix RTL article's hierarchical tax separator. fixes #1434
+* Fix: fix checkbox/radio compatibility with WPForms by reverting the webkit appearance override. fixes #1438
+* Imp: allow pointer events on scroll if submenu opened(hover) CSS. fixes #1439
+
+= 4.0.17 January 31st 2018 =
+* Fix: display the 404 content only when we're really in the 404 context. fixes #266
+* Fix: make author bio RTL compliant. fixes #1419
+* Fix: RTL breadcrumb separator displayed with wrong direction. fixes #1420
+* Fix: RTL submenu default opening direction. CSS fix for #1421 additionally fix menu button transform in RTL
+* Imp: Woocommerce - allow lightbox effect and smartload in product short description. fixes #1394
+* Imp: RTL submenu compliance 1) submenu animations -> fixes #1414  2) caret rotation adjustment when is RTL
+* Imp: Woocommerce - better u/o list styling for the product short description. fixes #1393
+* Imp: remove body itemprop itemtype structured data. Fix issues with missing microformats reported by the google-search-console in static pages. fixes #1401 #1344
+* Added: the topbar can now be displayed on mobile devices
+
+= 4.0.16 January 16th 2018 =
+* Fix: tagline not displayed in the header. fixes #1389
+* Fix: wording typo in the featured pages description placeholder
+
+= 4.0.15 January 10th 2018 =
+* Fix: modern - fix animated underline not removable in some navigation menus. Also do not underline current menu item when the underline hover effect option is disabled. fixes #1363
+* Fix: modern - remove useless @import rules for unused gfonts. fixes #1366
+* Fix: Wp icon font-family possible override with the pro Font Customizer. Fixes #1350
+* Fix: List in wc product description missing list style type. Fixes #1354
+* Fix: slider caption not centered in ipad Mini. Fixes #1356
+* Fix: clicking menu items with children and no URL bring to 404. Fixes #1358
+* Fix: remove unwanted vertical separator before comments link in single posts. Fixes #1381
+* Improved: improve mobile menu horizontal alignment. fixes #1380
+* Improved: full page search form focus/blur on overlay open/close. fixes #1374
+* Improved: upgraded the Font Awesome icon set to its latest version. adresses #1364
+
+= 4.0.14 December 22nd 2017 =
+* Fix: decrease regular submenu top to 15px. fixes #1333
+* Fix: apply margin-bottom to the right wrapper element, as part of the fix for #1331
+* Fix: avoid adding slider metabox to attachment which are not images. fixes #1317
+* Fix: widget categories title transformed to uppercase. apply the uppercase rule only to its list items also remove the bold font-weight. fixes #1309
+* Fix: always display the comment form before comment list (if any)
+* Fix: slider cta hiding text. fixes #1299
+* Fix: related posts height after the content with two sidebars fixes #1304
+* Fix: fix search icon not appearing in the topbar. fixes #1324
+* Fix: fix WooCommerce Terms and Condition checkbox in Checkout page is not really visible. fixes #1340
+* Fix : dropdown menu-item word-break property set to break-word. Fixes #1339
+* added: a boxed layout options for the header, the content and the footer
+* added: new option to allow a menu dropdown on click for mobile menu and side menu. Enabled by default on mobile devices
+
+= 4.0.13 November 20th 2017 =
+* Fix : WP 4.9 Code Editor issue could impact the custom css customizer option when checking errors in the code
+
+= 4.0.12 November 15th 2017 =
+* Fix: post/page layout meta box must show the contextualized default layout. fixes #1266
+* Fix: fix header/overlay search label not custom skinned. fixes #1295
+* Fix: fix potential slider captions overlapping on page load. fixes #1293
+* Imp : more precis title of the topbar menu
+* Imp: add new options to control the singular blocks location. author box (single post), related posts (single post), comments ( single posts and pages )
+* Imp: add mobile header search location option
+
+= 4.0.11 November 6th 2017 =
+* Fix : label padding for comment text area applied to other inputs. Fixes #1287
+* Fix : input white background applied to unwanted selectors. fixes #1288
+* Fix : mCustomScrollbar => the scrollers are positionned at the bottom on the first instantiation. Fixes #1285
+
+= 4.0.10 November 4th 2017 =
+* Fix : WooCommerce, make wc-cart header button act like a dropdown only when displaying the wc-cart widget (so not when displayed in the mobile header). fixes #1274
+* Fix : Some Woocommerce form layout issues. fixes #1243
+* Fix : WP 4.9 compatibility => in WP v4.9, the control options are not wrapped in the params property but passed directly instead
+* Fix : image description in attachment not correctly displayed. fixes #1231
+* Fix : single attachment date meta should not be a link. fixes #1233
+* Fix : added missing retina (x2) placeholder images
+* Fix : don't collapse mobile mene when scrolling fixes #1226
+* Fix : slider caption text size still too big on mobile. fixes #1235
+* Fix : update the way we get woocommerce cart url according to the new api + backward compatibility. fixes #1223
+* Fix : fix possible wrong responsive images URL for sliders in multisite installs. fixes #1247
+* Fix : remove the active callback of the front page content section in the customizer. Fixes #1252
+* Fix : WP4.9 compat customizer additional CSS default. fixes #1255
+* Fix : hover style on comment date links. Fixes #1114
+* Fix : if comments are displayed by the user ( option is checked ) always show comment history, even if comment are closed. Fixes #1253
+* Fix : removed no results and 404 quotations, probably wrongly attributed to authors. Fixes #1142
+* Fix : make sure the 404 content is always displayed when is_404() even if have_posts() is true. Fixes #1260
+* Imp : color style of the comment text area. Fixes #1268.
+* Imp : better the way to store when the user started using the theme
+* Imp : performance improvement by implementing lazyloading for the main slider. Images are loaded when the become visible. New specific option in advanced > performance
+* Imp : always close the mobile menu expanded when resizing
+* Imp : increased the .comment_link font-size in related posts
+* Imp : an anchor 'linear' scroll effect can be set by adding the attribute data-anchor-link="true" to a link
+* Imp : add custom page template for the modern style. fixes #1209
+* Imp : footer credits translation strings and link title.
+* Imp : footer colophon is now text-align:center for smartphones in portrait mode <=> media-breakpoint-down(xs)
+* Imp : bulleted and numbered lists formatting. Second line should be indented to the start of the text of the first line. added more space before and around. fixes #1102 #1183 #1224 #1228
+* Imp : wraps the_content() in the div.czr-wp-the-content element in the templates printing the wp content : singulars ( including attachment ) and plain post grid
+* Imp : add specific model and templates to render the post attachment of type image content
+* Imp : slider nav dots made smaller for mobiles @media-breakpoint-down(xs)
+* Imp : better styling for post metas. Fixes #1113
+* Added : a layout field meta box option for attachments. => if the layout is not set for a particular attachment, it will be inherited from the parent ( which is the current behaviour )
+* Added : the anchor scroll for the comment link in single posts
+* Added : new option to control the visibility of the slider navigation bullets. Implement #1207
+* Added : Doc search in the theme admin page "About Customizr"
+
+= 4.0.9 October 9th 2017 =
+* Fix : global skin CSS not printed when no custom header skin. Fixes #1215.
+* Fix : various html fixes like duplicated ids or data attributes
+* Fix : featured pages not translated by wpml. Fixes #1205
+* Fix : don't update the defaults when wp_installing()
+* Fix : preview error on singulars. Fixes #1194
+* Fix : typo in customizer controls
+* Fix : slider caption elements, default Fittext minsizes too high. Fixes #1191
+* Fix : link whole slide not including the caption. Fixes #1140
+* Fix : colors of the search form in dark overlay. Fixes #1185
+* Fix : closing slide's title h1 html tag. Fixes #1188
+* Fix : hamburger too dark on hover. fixes #1200
+* Fix : hamburger lines taking a 2px height randomly
+* Fix : logo / title stays shrinked when slowly scrolling up. fixes #1199. fixes #1192
+* Imp : slider bullets closer to the bottom and margin set in em
+* Imp : improve ol/ul margins in .tc-content-inner (.entry-content). Fixes #1183. Also slightly improve the cite element style.
+* Imp : set shrinked logo height with max-height instead of height => to inherit the animation
+* Imp : snaked submenu caret moved and rotated on the relevant side when "snaking"
+* Updated : footer credit links to customizr theme page instead of presscustomizr home page
+* Added : header custom back/fore-ground color options in modern style
+
+= 4.0.8 September 17th 2017 =
+* Fix: handle user's singular featured image height in singular. Fixes #1166.
+* Fix: correct horizontal positioning of the primary navbar menu. Fixes #1175.
+* Fix: fix slider textual fields wrong truncation. Fixes #1168.
+* Imp : Gallery img sizes. Fixes #1165.
+* Imp : improved customizer js code
+* Updated : about admin page
+
+= 4.0.7 September 7th 2017 =
+* Fix: menu centered wrongly displayed in ie/edge. Fixes #1163
+* Fix: Menu centered in desktop => scrolling up and down close to top is not well handled. Fixes #1161
+* Fix: RTL : search icon not properly left aligned on full screen search. Fixes #1159
+* Imp: Submenus items on mouse hover - reveal faster. Fixes #1154
+
+= 4.0.6 August 31st 2017 =
+* Fix: add menu btn was not shown when secondary menu associated but no sidenav shown. fixes #1125
+* Fix: fix singular thumbnail vertical spacing. fixes #1127
+* Fix: fix tagline cut off. fixes #1128
+* Fix: fp imgs always centered, fix handling slider not js centered
+* Fix: js-centering class to the classical grid figure to better target them in js
+* Fix: fix author meta displaying nicename instead of displayname. fixes #1148
+* Imp: allow search full page close on escape key pressed
+* Imp: implement new form style. fixes #1122
+* Imp: add entry-media__holder class to the grid figure (homogeneity)
+
+= 4.0.5 August 2nd 2017 =
+* Fix: fix woocommerce generatinc php notice. fixes #1120
+* Fix: fix CSS conflict with ui-datepicker-calendar. fixes #1123
+* Fix: sticky logo option was not displayed in the customizer. fixes #1119
+* Fix: display notice for socials in header in the right context. fixes #1118
+
+= 4.0.4 July 26th 2017 =
+* Fix: fix fp noy showing up in old php versions
+* Fix: Fix slider loader gif path can be parsed by Google bots
+* Fix: Potential submenu viewport overflow in firefox when fading fixes #1083
+* Fix: fix missing max-width style for logo w forced dims fixes #1101
+* Fix: same indentation for ul and ol
+* Fix: fix sidebars list widgets indetation + various rtl fixes
+* Fix: CSS handling of screen reader text fixes #1103 bullet 3
+* Imp: code improvements related to the post lists layout dependency
+* Imp: add menu button if not menu visible in the header
+* Imp: allow loading magnific-popup js in footer and minified
+* Add: add magnific popup js minified version
+* Add: an option to make the dark overlay optional in the modern style slider
+
+= 4.0.3 July 24th 2017 =
+* Fix: fix grid 1 column max height fixes #1088
+* Fix: submenus not sensible to the hover while fading + correctly handle the header z-index (user option)
+
+= 4.0.2 July 23rd 2017 =
+* fixed : child theme stylesheet wrongly enqueued
+* Imp: main content mobile blocks reorder via flexbox
+* Imp: fix comments date alignment fixes #1073
+
+= 4.0.1 July 23rd 2017 =
+* Fix : WooCommerce compatibility : Grid title truncation might affect products in product archives ( fixes #996 )
+* Fix : Added back the menu locations customizer section
+* Fix : grid caption background issue on mouse hover
+* Fix : fix non existing function as __ID filter callback
+* Added : style option in the customizer
+
+= 3.5.18 June 20th 2017 =
+* Fix: in singulars, no full width featured image if slider on fixes #988
+* Fix: typo producing Class 'CZR__' not found in classical retro compat
+
+= 3.5.17 June 18th 2017 =
+* Fix: fix access to undefined tc_rectangular_size class property fixes #971
+* Fix: typo producing Class 'CZR__' not found in classical retro compat fixes #972
+* Imp: exclude helpblock elements from allowed dropcap elements
+
+= 3.5.16 June 17th 2017 =
+* Imp: improve deploying process to avoid headers already sent issues
+* Fix: missing front js custom events: tc-resize, partialRefresh.czr fixes #961
+
+= 3.5.15 June 14th 2017 =
+* Fix: single slide sliders must not be draggable fixes #941
+* Fix: fix menu center resulting aligned to the left on IE fixes #944
+* Fix: fix position of structural hook __before_main_container
+* Fix: fix fpc-container alignment when in #content
+* Fix: by default the loop model should not register the loop item model if
+* Fix: remove old theme favicon control - is handled in js fixes #954
+* Fix: remove new lines at the end of czr_ classes fixes #957
+* Imp: improve classical grid CSS
+* Imp: fp and grid images always js centered
+* Add: add related posts options for single post
+
+= 3.5.14 June 9th 2017 =
+* fix: use of the add_editor_style wp function : needs relative paths fixes #926
+* fix: php 5.2.* when trying to access to a static property of a class which is actually a variable. fixes #928
+* fix: menu style for users started after 3.4.0 is 'aside'
+* fix: fp in static front page not displaying first attachment as thumb
+* improved : add rtl class to the inline font style in the wp editor
+
+= 3.5.13 June 7th 2017 =
+* improved : update select2 plugin to version 4.0.3 the same we use in the customizer
+* improved : improve customizr post meta boxes. Do not add in post types which are not visibile in front. Fire actions when meta boxes are added so that we can enqueue related resources (js/css) only when needed by checking on did_action('relevant_action_hook')
+* added : php, css and js code for modern style design
+
+= 3.5.12 May 5th 2017 =
+* Fix: use wp_sprintf to avoid Warning sprintf(): Too few arguments. Fixes #875
+* Fix: fix header layout center - menu position deps in the customizer. Fixes #879
+* Fix: don't display the single post featured image if a slider is displayed
+
+= 3.5.11 April 7th 2017 =
+* Fix: fix logo centered - menu centered not working non front ( fixes #868 )
+* Imp: add theme support for wc gallery zoom lightbox and slider ( fixes #871
+see: https://woocommerce.wordpress.com/2017/02/28/adding-support-for-woocommerce-2-7s-new-gallery-feature-to-your-theme/ )
+
+= 3.5.10 March 31st 2017 =
+* Imp : allow menu centering when logo/title centered #861
+* Imp : added a utility czr_fn_is_front_help_enabled() in init.php
+
+= 3.5.9 March 17th 2017 =
+* fix : prevdem mode should be turned off when user starts customizing
+* fix : user defined WP core settings like show_on_front should be preserved if customizing in prevdem mode
+* fix: slider of posts revert - show post attachment if no featured image fixes #850
+* fix : bugs on partialRefresh.czr. some placement have no containers
+* fix: allow using first attachment as thumb for slider of posts in pages
+* Fix: prevent colophon inner container enlarging page in certain vps see #853
+* improved czr_fn_get_raw_option : added an option to retrieve the not cached option value from database. Typically used when getting the template name. Should fix #844
+* added match Media polyfill.
+* Updated the parallax jquery plugin => added a matchMedia option set to 'only screen and (max-width: 768px)' by default
+* imp : allow child theme user to override the slide-placeholder image
+* updated it_IT translation fix #842
+* Imp: display thumbnail in single pages like we do in single posts fixes #738
+* added : theme support for selective refresh for widgets
+
+= 3.5.8 March 11th 2017 =
+* Fix: amend img_size param passed the wrong way to the posts slider builder fixes #840
+* Fix : removed li+li list style with 0.25em top margin
+
+= 3.5.7 March 8th 2017 =
+* improved : li+li list style with 0.25em top margin
+* fix : default slider should show the demo slides when previewing
+
+= 3.5.6 March 8th 2017 =
+* Fix: fix preview demo content should fix #785
+* Fix: fix wrong text domain in customizer files fixes #832
+* Fix: fix passing a non array to implode in the headings rendering fixes #830
+* Fix: fix small comment bubble borders issue introduced fixes #833
+* Fix: serverControlParams.translatedStrings by serverControlParams.i18n
+* Imp: improve slider loader visibility handling. Add javascript detection inline script in wp_head (ref. twentyseventeen and below)
+* Imp: init parallax slider in js files
+* Imp: WordPress theme guidelines, moved all hardcoded scripts in enqueued js file
+* Imp: in the customizer, display the front page layout control in the post layout section
+* Imp: posts slider, prevent get_posts if asking for n<1 posts
+* Changed : moved translated languages on polyglots : pt_BR, uk, tr_TR to lang_pro
+* Changed : the default slider is now the posts slider
+* Added : a default thumbnail for posts slides with no thumbnails
+
+= 3.5.5 February 26th 2017 =
+* Fix: do not show first attachment as thumb in single context fixes #815
+* Fix: fix reference to maybe undefined wp in front js fixes #820
+* Fix: fix comment bubble bottom arrow when custom color selected fixes #822
+* Imp : added aria-label to button - support accessibility
+* Imp : enabled accessibility for social icons
+* Imp: move theme Custom CSS option to WordPress embedded one fixes #818
+
+= 3.5.4 February 18th 2017 =
+* Fix: customizer javascript error when customizing the social links
+* Improved: customizer social links module user interface
+
+= 3.5.3 February 17th 2017 =
+* Fix: fix potential option inconsistencies with some hosts. fixes #810
+* Imp: rtl - fix update notice positioning in admin. fixes #800
+* Imp: improve bootstrap plugin compatibility with the slider. fixes #737
+* Removed : Swedish translations sv_SE, now part of the translation pack automatically downloaded from wordpress.org.
+* Imp : add Array.from js polyfill for customizer control js
+* Fix : IE11 (at least) : potential customizer breaks when trying log in the console
+
+= 3.5.2 February 8th 2017 =
+* Fix: second menu responsive actions on header partial refresh
+* Fix: fix rtl carousel-caption positioning and text alignment. fixes #797
+* Fix: fix btn-toggle-nav position on sticky-enabled when tagline-off #799
+* Imp: fix btn-toggle-nav positioning when sticky enabled and no socials
+* Imp: improve overall plugins compatibility : do not render the comments template more than once should fix #774
+* Imp: customizer - fonts/skins select on focus instead of on click
+* Imp: customizer - improve slider control dependencies some controls should not be displayed when demo slider is selected
+* Imp: try to avoid double social icons see #787
+* Imp: compliancy with WP theme guidelines : one customizr pro link in the customizer, a simpler screenshot, no donate button in the customizer
+
+= 3.5.1 February 1st 2017 =
+* fixed : compatibility issue with PHP<5.5
+* fixed: customizer header partial refresh not correctly working
+
+= 3.5.0 January 31st 2017 =
+* fixed : Trying to get property of non-object php notice when setting up WooCommerce
+* Imp : introduced Poppins as the new default Google font
+* Imp : changed default body line-height in pixelds to 1.6em
+* Imp: new screenshot
+* Imp: implemented an enhanced social links module in the customizer
+* Imp: improved compatibility with Woothemes Sensei plugin fixes #759
+* Imp: use lower tc-page-wrap and tc-sn z-index for compatibility reasons fixes #762
+* Imp: button toggle nav positioning improvments
+* Imp : added a notice for for freshly created menu not yet visible in the header main location
+* Imp: improve side menu positioning depending on the header layout
+
+= 3.4.38 January 21st 2017 =
+* Fix: fix default page menu behavior when dropdown on click submenu open #730
+* Imp: fix plugin php7 checker (wrong) compatibility issue #727 , #719
+* Imp: improve WooCommerce compatibility + allow shop layout selection #733
+* Fix: small tweak to the header cart WooCommerce CSS #733
+* Fix: add tc-center-images body class only when tc_center_img option true #735
+* Fix: fix superfluous bracket in font-awesome icons inline style #739
+* Fix: escape title attributes used in fp round-div and readmore button #743
+* Imp: various bootstrap>2.3.2 compatibility improvements fix #742 #737 #746
+* Imp: img to smartload must have an src which matches an allowed ext #747
+
+= 3.4.37 January 5th 2017 =
+* fixed : correctly handle sizes attribute when smartloading resp imgs
+* fixed : back to top arrow position option
+* fixed : prevent paging info duplication in wc breadcrumb
+* fixed : avoid unbreakable woocommerce product labels ( #713 )
+* improved : encode pipes when requesting multiple gfont families
+* improved : avoid img smartload php parsing in ajax requests
+* improved : rightly handle sizes/data-sizes attribute replacement in php
+* improved : use modern window.matchMedia do determine the viewport's width ( #711 )
+* improved : removed language packs already translated on translate.wordpress.org. German (Formal) (de_DE_formal), English (Canada) (en_CA), English (UK) (en_GB), Finnish (fi), French (Belgium) (fr_BE), French (France) (fr_FR), French (Canada) (fr_CA), Hebrew (he_IL), Italian (it_IT), Norwegian (Bokmål) (nb_NO), Polish (pl_PL), Romanian (ro_RO), Russian (ru_RU)
+
+= 3.4.36 December 6th 2016 =
+* improved : compatibility with WP 4.7
+* added : minor UI change in the customizer, new home button added
+
+= 3.4.35 November 17th 2016 =
+* fixed : display dropdown submenu caret only for relevant '.nav' elements
+* improved : update FontAwesome to v4.7.0 + add Snapchat social link
+
+= 3.4.34 October 28th 2016 =
+* fixed : compatibility issue with php7
+* fixed : better check for is customize preview()
+* fixed : correctly instantiate front classes in admin building slider of posts fixes #662
+* improved : add requestAnimationFrame polyfill required by several jquery-plugins fixes #665
+* improved : get rid of the outdated menu item first letter styling
+* improved : Imp: add back langpacks completed on translate.wordpress.org. Needed for Customizr-Pro. note: german GTE considered our german translation as formal german. The current de_DE.po(mo) is just a copy of the de_DE_formal.po(mo) pack.
+
+= 3.4.33 October 17th 2016 =
+* fixed : compatibility problems with plugins using the WP tinyMCE editor. Example : Black studio tinyMCE
+
+= 3.4.32 October 17th 2016 =
+* fixed : added back function tc__f() for retro-compatibility
+* updated : grey.css is now the default skin, color #5A5A5A. No impact for previous version users using the old default skin (blue3.css)
+
+= 3.4.31 October 16th 2016 =
+* fixed : wrong class name in czr-init.php
+* fixed : footer widgets not displayed
+
+= 3.4.30 October 15th 2016 =
+* added : in single post, new wp filter : apply_filters( 'tc_single_post_section_class', array( 'entry-content' )
+* added : in single post, new wp action : do_action( '__after_single_entry_inner' )
+* added : demo singleton class CZR_prevdem
+* added : demo images in inc/assets/img/demo
+* Imp: group files in 4 main files to load in inc/
+* Imp: add fp and round-div comp code with plugins running bootsrap3+ fixes #640
+* Fix: fix js issue for pages with no header (dropdown placement)fixes #643
+* Imp: replace class prefixes from TC to CZR
+* Imp: change function names prefix from tc to czr
+* Imp: add parallax classes and js only when slider exists
+* Removed : language packs translated on wp.org
+
+= 3.4.23 September 14th 2016 =
+* added : a parallax scrolling option for sliders. Enabled by default.
+* added : the waypoint js library (v4.0.0)
+* changed : slide loader icon is enabled by default
+* fixed : center the rectangular thumbs with golden ration only in post lists, not in single posts
+
+= 3.4.22 August 23rd 2016 =
+* Fix: tinymce custom style conflicts (detected with the ACF WP plugin ) with tinymce 4.x api. Fixes #626
+* Fix : customizer terms array (categories/tags pickers options) not being updated on term delettion. fixes #620
+* Improved : use WooCommerce breadcrumb code in wc contexts
+* Improved : remove it lang files - will use the ones available on wp.org
+* Added : new option - customize back to top - arrow position left or right
+
+= 3.4.21 May 6th 2016 =
+* Fix: remove grunt live reload script fixes #611
+* Fix: border-collapse specify 'separate' instead of 'initial': Opera fix should work with IE too, needs further tests
+* Fix: fix wp media insert in front fixes #605
+* Fix: fix woocommerce variation not visible on a product page fixes #601
+* Fix : rename Finnish translations to match Wordpress core
+* Fix: fix potential issue with the dropdown limit to viewport and some plugins (maybe) fixes #593
+* Imp: be sure drodpown are displayed when overflowing the header/navbar fixes #608
+* Imp: allow wc-cart in the header ajax update
+
+= 3.4.20 March 14th 2016 =
+* Update: translations ru_RU and id_ID
+* Fix: calendar widget style in footer with multiple widget instances
+* Fix: disable smoothscroll touchpad support by default
+* Imp: move the woocommerce header options, option do display the shopping cart on scroll
+* Imp: wp 4.5 compatibility better rendering of the rating block in the customizer
+* Fix: do not display menu-button when mobile+scrolling+sticky+not_allowed fixes #571
+
+= 3.4.19 February 16th 2016 =
+* Add : 3 new social icons: VKontakte, Yelp, Xing
+* Imp: woocommerce icon cart now rendered with font-awesome
+* Imp: remove outdated old ie fixes in the head
+* Imp: move front and back icons to Font Awesome set
+* Add: add customizer setting to optionally load font-awesome resources
+* Imp: logo - replace previous upload control in the customizer with cropped images control
+* Updated: translation fr_CA
+* Fix: slider - avoid caption increasing slides height
+* Fix: amend missing comma in the previous commit
+* Fix: better rendering of the social-block in sidebar and colophon when they take up more than one line
+* Fix: amend typo in the new control css
+* Fix: refine compatibility with old customizr versions
+* Fix: make icons in singular post / page contexts skin based
+* Fix: never display edit links in the customizer fixes #361
+* Fix: avoid outline showing up on links click in ff (v44) fixes #538
+* Fix: fix potential warning when using custom skins fixes #540
+
+= 3.4.18 January 30th 2016 =
+* Updated Italian translation plus a typo
+* Add: new option - display woocommerce cart in the header when sticky fixes #499
+* Fix: fix grid not considering custom max height in left sidebar layout
+* Fix: fix smartloaded img not correctly displayed in some browsers fixes #534
+* Fix: fix slider link with QTranslate X in pre-path mode thanks to @justinbb fixes #531
+* Fix: fix broken link to the header's navigation doc
+* Fix: fix broken links to theme's faq
+* Fix: fix broken links to the slider docs
+* Fix: fix broken links to the docs in class-fire-utils
+* Fix: fix grid expanded post edit link not reachable fixes #286
+* Fix: refine alignment when tagline not shown
+
+= 3.4.17 January 23rd 2016 =
+* Add: a few translation tr_TR thanks to @ghost
+* Add : Indonesian translation. Thanks to Rio Bermano
+* Fix : some Swedish translation strings. Thanks to Mia Oberg.
+* Fix: fix post-metas hierarchical tax check when building button class
+* Fix: prefer mysqli api to the mysql ones (deprecated) in sys-info fixes #508
+* Fix: amend wrong documentation link in sidebar widget placeholder fixes #502
+* Fix: fix jetpack's photon - theme smartload compatibility issue
+* Fix: fix btt-arrow and scroll-down issue Also use more descriptive variable names. fixes #477
+* Fix: fix disabling wc-header-cart to reset tc_user_options_style
+* Fix: avoid smartload conflict with buddypress setting avatar img fixes #467 a)
+* Fix: better html comments fix rare cases when some html comments were considered as server's directives. fixes #470
+* Fix: skip URIS images among imgs to smartload fixes #463
+* Fix: smarload preg callback - reverse strpos param order
+* Fix: apply border bottom only to theme sidebars widget list item
+
+= 3.4.16 December 10th 2015 =
+* Added: WooCommerce cart in the header
+* Added: Turkish (tr_TR) translation files
+* Added: Front js - new js class to better place dropdowns submenus avoiding overflowing the window
+* Added: Images compatibility with wp 4.4+. Added customizer options to disable the default responsive images behaviour for slider and thumbnails.
+* Fix: allow smartload in wp 4.4 (responsive images)
+* Fix: alternate layout is available only if thumb position is right/left. Also fixes the alternate layout thumbnail's height control visibility
+* Fix: do not display colophon's back to top text when back to top arrow button is enabled
+* Fix: rtl colophon's layout fixes
+* Fix: remove unneeded css code for the secondary menu dropdown top arrow
+* Fix: allow smartload when jetpack's sharing enabled
+* Fix: fix some issues regarding to smartload and centering imgs
+* Fix: show second-menu dropdown-submenu arrow anyways
+* Fix: WPML customizr option name
+* Fix: allow logo transition only when both w,h are available.
+* Fix: fix padding for the first menu-item in responsive menu
+* Fix: remove unsupported turkish translation files
+* Fix: Front-js - new js event triggered for sticky header and sidenav
+* Fix: limit dropdown top arrow adjustment to the tc-wc-menu
+* Fix: some CSS fixes for parent dropdown submenus in secondary menu
+* Fix: allow slides translations in post/pages
+* Updated : Dutch translation. Thanks to Helena Handa
+* Updated: Brazilian Portuguese translation
+* Updated: japanese translation
+* Updated Farsi translation
+* Improved : disable all front end notices when customizing
+
+= 3.4.15 November 14th 2015 =
+* Fix: wrong variable declaration in the main front js file
+* Updated: Norwegian translation. Thanks to Marvin Wiik.
+* Fix: better way to check if the search query has results
+* Fix: the-events-calendar: fix showing the content twice in single event pages fixes #396
+* Fix: display header in multisite signup/activate pages
+* updated Brazilan Portuguese. Thanks to Helena Handa.
+* Fix: fix column layouts in Help and About admin pages
+* Add: WPML compatibility
+* Improved: disable the front end notices when customizing
+
+= 3.4.14 November 4th 2015 =
+* Add: Added a dismissable help notice on front-end in post lists about using img smart-load
+* Add : add Powered by Wordpress in footer credits
+* updated : German translation, thanks to Martin Bangermann
+* Fix: menu display element, cast element classes to array fixes #372
+* Fix: Deep link to customizer menu panel in a control description fixes #244
+* Fix: Deep link to the featured page control in the removable front end block fixes #246
+* Fix: better handling of the simple-load event triggered on holders fixes #377
+
+= 3.4.13 October 16th 2015 =
+* fix : better support for php versions < 5.4.0
+
+= 3.4.12 October 16th 2015 =
+* added : performance help notice on front-end for posts/pages showing more than 2 images
+* updated : Italian Translation thanks to Giorgio Riccardi http://www.giorgioriccardi.com/
+* fix: better support for Visual Composer, prevent conflicts with anchor links in visual composer elements
+* fix: better support for The Events Calendar, events list view fixes #353
+* fix: better support for JetPack's photon, load imgs from cdn
+updated Polish translation. Thanks to Krzysztof Busłowicz
+* fix : better retro compatibility for the customizer preview for WP version under 4.1
+* fix: Select a submenu expansion option disappears #340
+* fix: allow control deeplink in the customizer
+* fix: limit previous fix to ie9 and below
+* fix: slider-controls always visible in ie9- In such browsers the opacity+transition doesn't really work fine, let's make them always visible
+
+= 3.4.11 September 30th 2015 =
+* added: new social link - email
+
+= 3.4.10 September 29th 2015 =
+* added: new option, filter home/blog posts by categories
+* added: info box at the bottom of the slides table on how to add another slide
+* added: in customizer > Front Page > Slider, make some "sub" slider height options dependant on the actual user define slider height
+* updated: translation he_IL.po
+* fix: let sticky-footer detect the golden-ratio is applied to the grid
+* fix: exclude links wrapped in an underlined span from the eligible externals
+* fix: sticky-header: logo re-size on scrolling when needed fixes #314
+* fix: avoid navbar-wrapper overlapping title/logo in mobiles when no site-description is shown for ww<767px
+
+= 3.4.9 September 20th 2015 =
+* added: New feature - display a slider of recent posts on home
+* fix: RTL initial position of the small arrow in the accordion(JTS)
+* fix: broken update notice in edit attachment page fixes issue #248
+* fix: display slider notice only on the demo slider fixes issue #251
+* fix: Add back the Google Font img in the Customizer fixes issue #285
+* fix: Woocommerce's product tabs not showing if Smooth scroll on click enabled Fixes issue #258
+* fix: Allow the expanded grid title to be translated with qtranslate
+* fix: include pages in search results when including cpt in post lists Fixes issue #280
+* fix: expand last published sticky post in the grid
+* fix: disable link smoothscroll in woocommerce contexts See issue #258
+
+= 3.4.8 August 24th 2015 =
+* fix : issue #242 https://github.com/Nikeo/customizr/issues/242 : Effects common to regular menu and second horizontal menu where not visible when the regular menu was selected
+* fix: qTranslate-X compat code improved (issue : https://wordpress.org/support/topic/featured-pages-and-qtranslate?replies=4 )
+
+= 3.4.7 August 23rd 2015 =
+* update : translations files
+* fix : replace Customizr favicon by the WP 4.3 site icon. Handle the transition on front end and in the customizer for users already using the Customizr favicon. Retro compat : not applied if WP version < 4.3 + Check if function_exists('has_site_icon')
+* fix : for control visibility bug since wp4.3
+* add : a boolean filter to control the colophon back to top link
+* fix : properly remove box around navbar when no menu is set Bug reported here: https://wordpress.org/support/topic/dispay-menu-in-a-box?replies=6
+* fix : do not update the post meta as soon as you enter the add post page
+
+= 3.4.6 August 4th 2015 =
+* fixed : polylang compat code according to the new customizer settings
+* fixed : use original sizes (full) for logo and favicon attachments
+
+= 3.4.5 July 31st 2015 =
+* fixed : various css issues for the vertical menu items
+
+= 3.4.3 July 31st 2015 =
+* fixed : minor css adjustements for the menus
+* added : a dismissable help notice under the main regular menu, on front-end, for logged-in admin users (edit options cap)
+
+= 3.4.2 July 30th 2015 =
+* fixed : expand on click not working for the secondary menu.
+
+= 3.4.1 July 30th 2015 =
+* fix : a missing text domain for a translation string
+
+= 3.4.0 July 28th 2015 =
+* added : new features for sliders : use a custom link, possibility to link the entire slide and to open the page in a new tab
+* added : new default sidenav menu
+* added : new optional secondary menu
+* added : new default page menu
+* added : new feature smoothscroll option in customize > Global Settings
+* added : new feature Sticky Footer in customize > Footer
+* added : a "sidebars" panel in the customizer including a social links section. (moved from global settings > Social links). Header and Footer social links checkboxes have been also moved into their respective panels.
+* added : a theme updated notice that can be dismissed. Automatically removed after 5 prints.
+* added : various optional front end help notices and placeholder blocks for first time users.
+* fix : avoid blocks reordering when they contain at least one iframe (avoid some reported plugin conflicts)
+* fix : video post format, show full content in alternate layout
+* fix : display slider-loading-gif only if js enabled
+* fix : display a separator after the heading in the page for posts (when not home)
+* fix : html5shiv is loaded only for ie9-
+* fix : dynamic sidebar reordering of the sidebar was not triggered since latest front js framework implementation improved : used of the tc-resize event for all resize related actions added : secondary menu items re-location for responsivereplaced : (js) 'resize' event by the custom 'tc-resize'
+* fix : anchors smooth scroll - exclude ultimate members anchor links
+* changed : customize transport of the header layout setting is now 'refresh'
+* improved : modernizr upgraded to the latest version
+* improved : customizer preview is refreshed faster
+
 = 3.3.28 June 25th 2015 =
 * fix : re-introduce btt-arrow handling in new front js
 * fix : fix external link on multiple occurrences and exclude parents
@@ -171,7 +978,7 @@ The exceptions to this license are as follows:
 * fixed : use '===' to compare with '0'.
 * fixed : fix logo ratio, apply only when no sticky-logo set
 * fixed : avoid plugin's conflicts with the centering slides feature: replace the #customizr-slider's 'slide' class with 'customizr-slide'
-* fixed : user defined comments setting for a single page in quick edit mode 
+* fixed : user defined comments setting for a single page in quick edit mode
 * fixed : pre_get_posts as action instead of filter
 * fixed : hook post-metas and headings early actions to wp_head instead of wp
 * fixed : minor css issues due to the larger width for the customizer controls
@@ -714,7 +1521,7 @@ added grid design option as a specific set to be revealed on click
 = 3.2.0 October 20th 2014 =
 * added (php, class-content-slider.php) New action hooked : __after_carousel_inner. Used to render the slider controls.
 * added (js) slider swipe support with hammer.js. Controls not renderd for mobile devices.
-* fixed (php, class-content-comments.php, comments.php) Comment title was not included in the translation strings (out of the poedit source paths). New filter on comment_form_defaults filter 
+* fixed (php, class-content-comments.php, comments.php) Comment title was not included in the translation strings (out of the poedit source paths). New filter on comment_form_defaults filter
 * added (css, php : class-fire-init.php) css : class 'is-customizing' is added to the body tag in a customization context
 * changed (css) transition: width 0.2s ease-in-out, left 0.25s ease-in-out, right 0.25s ease-in-out; is only applied in a customization context.
 * changed : (php, class-header-header_main.php) tc_logo_class filter is now handled as an array of css classes instead of a string : implode( " ", apply_filters( 'tc_logo_class', array( 'brand', 'span3') ) )
@@ -793,7 +1600,7 @@ added grid design option as a specific set to be revealed on click
 * improved : (php , class-fire-utils.php#207)tc_get_the_ID() : now check the wp_version global to avoid the get_post() whitout parameter issue. ( $post parameter became optional after v3.4.1 )
 * added : (php, class-controls.php) 2 new action hooks : __before_setting_control, __after_setting_control, using the setting id as additional parameter.
 * fixed : (css) .navbar-inner .nav li : 1px hack for chrome to not loose the focus on menu item hovering
- 
+
 = 3.1.22 August 16th 2014 =
 * added : (css, class-fire-init.php#75) 9 new minified css skins
 * fixed : (php, class-content-breadcrumb.php#443) added a check is_array(get_query_var( 'post_type' ) in archive context
@@ -1139,10 +1946,10 @@ added grid design option as a specific set to be revealed on click
 * fixed : reordering slides was deleting the slides
 
 = 3.0.2 July 20th, 2013 =
-* fixed : problem fixed on theme zipping and upload in repository 
+* fixed : problem fixed on theme zipping and upload in repository
 
 = 3.0.1 July 4th, 2013 =
-* fixed : 'header already sent' error fixed (space before php opening markup in an admin class) was generating an error on log out  
+* fixed : 'header already sent' error fixed (space before php opening markup in an admin class) was generating an error on log out
 
 = 3.0 June 28th, 2013 =
 * changed : global code structure has changed. Classes are instanciated by a singleton factory, html is rendered with actions, values are called through filters
@@ -1257,7 +2064,7 @@ added grid design option as a specific set to be revealed on click
 
 = 1.1.7 April 17th, 2013 =
 * file structure simplification : one core loop in index.php
-* 
+*
 
 = 1.1.6 April 17th, 2013 =
 * Removal of add_editor_style()
@@ -1281,3 +2088,7 @@ added grid design option as a specific set to be revealed on click
 
 = 1.0 April 16th, 2013 =
 * Initial Release
+
+== Resources ==
+* All images included in the theme are either created for the theme and inheriting its license, or licensed under CC0.
+* All other theme assets like scripts, stylesheets are licensed under GNU General Public License version 2, see file license.txt, or GPL compatible licenses like MIT, WTFPL. See headers of each files for further details.
